@@ -34,3 +34,6 @@ end
 for i = 1, f(2) do
   print(i)
 end
+
+-- break return 只能在 for,repeat,while 中使用
+-- 调试打断点时，可以 -> do return end , 不能 直接return，语法错误
