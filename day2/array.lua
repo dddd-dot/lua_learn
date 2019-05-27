@@ -44,7 +44,15 @@ for i, v in ipairs(mt) do
 end
 
 local arr = {n = 10}
-print(#arr) -- 0
+print(#arr) -- 0 # 索引下标对应值为nil时，停止，所以 arr[1] = 0 长度等0, 无法正确获取数组大小
+function table_leng(t)
+  local leng = 0
+  for k, v in pairs(t) do
+    leng = leng + 1
+  end
+  return leng
+end
+print(table_leng(arr)) -- 1
 print(arr["n"]) -- 10
 
 local arr1 = {10}
